@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\rani.nayak\\Downloads\\BlazorBookStoreApp\\BlazorBookStoreApp\\BlazorBookStoreApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorBookStoreApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BlazorBookStoreApp.99vilmoxey.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\rani.nayak\\Downloads\\BlazorBookStoreApp\\BlazorBookStoreApp\\BlazorBookStoreApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\rani.nayak\\Downloads\\BlazorBookStoreApp\\BlazorBookStoreApp\\BlazorBookStoreApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rani.nayak\\Downloads\\BlazorBookStoreApp\\BlazorBookStoreApp\\BlazorBookStoreApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rani.nayak\\Downloads\\BlazorBookStoreApp\\BlazorBookStoreApp\\BlazorBookStoreApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\rani.nayak\\Downloads\\BlazorBookStoreApp\\BlazorBookStoreApp\\BlazorBookStoreApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorBookStoreApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorBookStoreApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlazorBookStoreApp.props",
+      "PackagePath": "build\\BlazorBookStoreApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorBookStoreApp.props",
+      "PackagePath": "buildMultiTargeting\\BlazorBookStoreApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorBookStoreApp.props",
+      "PackagePath": "buildTransitive\\BlazorBookStoreApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

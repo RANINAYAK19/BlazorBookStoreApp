@@ -1,0 +1,51 @@
+﻿@page "/product-details/{ProductId:int}"
+@inject Services.ProductService ProductService
+@using BlazorBookStoreApp.Models
+
+<h3>Product Details</h3>    
+
+
+@if (isLoading)
+{
+    <div class="spinner">
+        <!-- Simple CSS Spinner -->
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else if (product == null)
+{
+    <p>No product details available.</p>
+}
+else
+{
+    <div>
+        <h4>@product.Name</h4>
+        <p><strong>Description:</strong> @product.Description</p>
+        <p><strong>Price:</strong> $@product.Price</p>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int ProductId { get; set; }
+    private Product product;
+    private bool isLoading = true; // Flag to track if the data is loading
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+        // Set isLoading to true before fetching data
+        isLoading = true;
+
+        await Task.Delay(1000); // Simulate delay
+
+        // Fetch the product data
+        product = await ProductService.GetProductAsync(ProductId);
+
+        // Set isLoading to false after data is fetched
+        isLoading = false;
+    }
+}
+

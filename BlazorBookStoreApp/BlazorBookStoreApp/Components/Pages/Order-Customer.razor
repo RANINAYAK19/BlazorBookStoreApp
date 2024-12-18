@@ -1,0 +1,49 @@
+﻿@page "/prefetch-orders-customers"
+@inject DataService DataService
+
+<h3>Orders and Customers</h3>
+
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h4>Orders</h4>
+    <ul>
+        @foreach (var order in orders)
+        {
+            <li>Order ID: @order.OrderId, Details: @order.OrderDetails, Customer: @order.Customer.Name</li>
+        }
+    </ul>
+
+    <h4>Customers</h4>
+    <ul>
+        @foreach (var customer in customers)
+        {
+            <li>@customer.Name (Email: @customer.Email)</li>
+        }
+    </ul>
+}
+
+@code {
+    private bool isLoading = true;
+    private List<Order> orders = new List<Order>();
+    private List<Customer> customers = new List<Customer>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Start both data fetches concurrently
+        var ordersTask = DataService.GetOrdersAsync();
+        var customersTask = DataService.GetCustomersAsync();
+
+        // Wait for both tasks to complete concurrently
+        await Task.WhenAll(ordersTask, customersTask);
+
+        // Assign results to properties
+        orders = await ordersTask;
+        customers = await customersTask;
+
+        isLoading = false;
+    }
+}

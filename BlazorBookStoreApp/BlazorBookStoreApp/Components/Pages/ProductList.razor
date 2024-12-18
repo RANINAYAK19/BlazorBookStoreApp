@@ -1,0 +1,34 @@
+﻿@page "/product-list"
+@inject Services.ProductService ProductService
+@using BlazorBookStoreApp.Models
+
+<h3>Product List</h3>
+
+@if (products == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <ul>
+        @foreach (var product in products)
+        {
+            <li>
+                <a href="/product-details/@product.Id">@product.Name</a> - $@product.Price 
+
+                @* <NavLink href="@($"/product-details/{product.Id}")" prefetch="true">
+                @*     @product.Name *@
+                @* </NavLink> *@
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private List<Product> products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetProductsAsync();
+    }
+}
